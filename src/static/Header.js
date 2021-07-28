@@ -52,7 +52,7 @@ const Header = () => {
             <Nav.Link className="user text-warning pb-0">
               <p class="text-warning">Logged in as: {userState.username}</p>
             </Nav.Link>
-            <Nav.Link href="http://localhost:8080/logout">Logout</Nav.Link>
+            <Nav.Link href="https://capstone-movie.herokuapp.com/logout">Logout</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
