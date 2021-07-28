@@ -12,7 +12,7 @@ const Header = () => {
 
   const postUser = () => {
     let data = userState;
-    fetch("http://localhost:8080/users/post/google", {
+    fetch("https://capstone-movie.herokuapp.com/users/post/google", {
       method: "POST",
       credentials: "include",
       body: JSON.stringify(data),
