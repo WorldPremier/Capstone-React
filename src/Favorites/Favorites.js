@@ -19,7 +19,7 @@ const Favorites = () => {
   }, [renderState]);
 
   async function getFavorites() {
-    const response = await fetch("http://localhost:8080/users/login", {
+    const response = await fetch("https://capstone-movie.herokuapp.com/users/favorites", {
       method: "GET",
       credentials: "include",
     });
@@ -50,7 +50,7 @@ const Favorites = () => {
     const movieIndex = favorites.indexOf(movie.id);
     favorites.splice(movieIndex, 1);
 
-    const response = await fetch("http://localhost:8080/users/favorites", {
+    const response = await fetch("https://capstone-movie.herokuapp.com/users/favorites", {
       method: "POST",
       credentials: "include",
       body: JSON.stringify(user),
