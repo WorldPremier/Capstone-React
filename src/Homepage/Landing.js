@@ -12,7 +12,7 @@ const Landing = () => {
   }, []);
 
   const getUser = () => {
-    fetch("http://localhost:8080/users/login", {
+    fetch("https://capstone-movie.herokuapp.com/users/login", {
       method: "GET",
       credentials: "include",
     })
