@@ -13,7 +13,8 @@ const Login = () => {
       </div>
       <a
         className="button-link"
-        href="http://localhost:8080/oauth2/authorization/google"
+        
+        href="https://capstone-movie.herokuapp.com/oauth2/authorization/google"
       >
         <div id="buttonSign" className="rowLogin">
           <button>Sign in with Google</button>
