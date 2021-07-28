@@ -9,7 +9,7 @@ const Results = ({ movieState, back, backButtState }) => {
   }, []);
 
   async function getUser() {
-    const response = await fetch("http://localhost:8080/users/login", {
+    const response = await fetch("https://capstone-movie.herokuapp.com/users/login", {
       method: "GET",
       credentials: "include",
     });
@@ -36,7 +36,7 @@ const Results = ({ movieState, back, backButtState }) => {
       }
     }
 
-    const response = await fetch("http://localhost:8080/users/favorites", {
+    const response = await fetch("https://capstone-movie.herokuapp.com/users/favorites", {
       method: "POST",
       credentials: "include",
       body: JSON.stringify(user),
