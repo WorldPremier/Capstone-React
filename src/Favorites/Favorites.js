@@ -19,7 +19,7 @@ const Favorites = () => {
   }, [renderState]);
 
   async function getFavorites() {
-    const response = await fetch("https://capstone-movie.herokuapp.com/users/favorites", {
+    const response = await fetch("https://capstone-movie.herokuapp.com/users/login", {
       method: "GET",
       credentials: "include",
     });
