@@ -2,6 +2,8 @@ import { Navbar, Nav } from "react-bootstrap";
 import React, { useState, useEffect } from "react";
 import MyflixLogo4 from "./MyflixLogo4.png";
 import "../styles/header.css";
+import { BACKEND_URL } from "../constants";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [userState, setUserState] = useState({});
@@ -12,7 +14,7 @@ const Header = () => {
 
   const postUser = () => {
     let data = userState;
-    fetch("https://capstone-movie.herokuapp.com/users/post/google", {
+    fetch(`${BACKEND_URL}/users/post/google`, {
       method: "POST",
       credentials: "include",
       body: JSON.stringify(data),
@@ -42,8 +44,8 @@ const Header = () => {
           className="justify-content-start"
         >
           <Nav>
-            <Nav.Link href="/">Search</Nav.Link>
-            <Nav.Link href="/favorites">Favorites</Nav.Link>
+          <Nav.Link ><Link to="/search">Search</Link></Nav.Link>
+            <Nav.Link><Link to="/favorites">Favorites</Link></Nav.Link>
           </Nav>
         </Navbar.Collapse>
 
@@ -52,7 +54,7 @@ const Header = () => {
             <Nav.Link className="user text-warning pb-0">
               <p class="text-warning">Logged in as: {userState.username}</p>
             </Nav.Link>
-            <Nav.Link href="https://capstone-movie.herokuapp.com/logout">Logout</Nav.Link>
+            <Nav.Link href={`${BACKEND_URL}/logout`}>Logout</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

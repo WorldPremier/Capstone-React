@@ -2,6 +2,8 @@ import React from "react";
 import MyflixLogo4 from "../static/MyflixLogo4.png";
 import "../styles/login.css";
 import videos from "../styles/videos.mp4";
+import { BACKEND_URL } from "../constants";
+
 const Login = () => {
   return (
     <div id="loginform">
@@ -14,7 +16,7 @@ const Login = () => {
       <a
         className="button-link"
         
-        href="https://capstone-movie.herokuapp.com/oauth2/authorization/google"
+        href={`${BACKEND_URL}/oauth2/authorization/google`}
       >
         <div id="buttonSign" className="rowLogin">
           <button>Sign in with Google</button>
