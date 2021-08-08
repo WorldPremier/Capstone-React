@@ -26,7 +26,7 @@ const Landing = () => {
   return (
     <div>
       {authState ? <Header /> : <div></div>}
-      {authState ? <Search /> : <Login />}
+      {authState ? <Redirect to="/search" /> : <Login />}
     </div>
   );
 };

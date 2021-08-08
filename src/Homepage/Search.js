@@ -5,6 +5,7 @@ import MovieCard from "../static/MovieCard";
 import Modal from "../Homepage/Modal";
 import Results from "../static/Results";
 import MyflixLogo4 from "../static/MyflixLogo4.png";
+import Header from "../static/Header";
 
 const Search = () => {
   const [resultsState, setResultsState] = useState([]);
@@ -52,6 +53,7 @@ const Search = () => {
   console.log(resultsState);
   return (
     <div>
+      <Header/>
       {displayState ? (
         <Results
           movieState={movieState}
