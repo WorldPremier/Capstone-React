@@ -1,1 +1,1 @@
-export const BACKEND_URL = "https://capstone-movie.herokuapp.com/"
+export const BACKEND_URL = "https://capstone-movie.herokuapp.com"
