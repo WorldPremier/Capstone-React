@@ -4,6 +4,8 @@ import Login from "./Login";
 import Search from "./Search";
 import Header from "../static/Header";
 import { BACKEND_URL } from "../constants";
+import { Link, Redirect } from "react-router-dom";
+
 
 const Landing = () => {
   const [authState, setAuthState] = useState(false);
