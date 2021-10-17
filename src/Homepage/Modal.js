@@ -23,7 +23,7 @@ const ModalIn = () => {
 
   async function getInTheaters() {
     const response = await fetch(
-      "https://imdb-api.com/en/API/InTheaters/k_q83az6pl",
+      `https://imdb-api.com/en/API/InTheaters/${API}`,
       {
         method: "GET",
       }
@@ -36,7 +36,7 @@ const ModalIn = () => {
   async function getMovieInfo(movie) {
     let movieId = movie.id;
     const movieResponse = await fetch(
-      "https://imdb-api.com/en/API/Title/k_q83az6pl/" + movieId,
+      `https://imdb-api.com/en/API/Title/k_q83az6pl/${API}` + movieId,
       {
         method: "GET",
       }
