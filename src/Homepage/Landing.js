@@ -15,7 +15,7 @@ const Landing = () => {
   }, []);
 
   const getUser = () => {
-    fetch(`${BACKEND_URL}/users/login`, {
+    fetch(`https://capstone-movie.herokuapp.com/users/login`, {
       method: "GET",
       credentials: "include",
     })

@@ -6,6 +6,7 @@ import Modal from "../Homepage/Modal";
 import Results from "../static/Results";
 import MyflixLogo4 from "../static/MyflixLogo4.png";
 import Header from "../static/Header";
+import {API}from "../constants.js";
 
 const Search = () => {
   const [resultsState, setResultsState] = useState([]);
@@ -13,6 +14,7 @@ const Search = () => {
   const [titleState, setTitleState] = useState("");
   const [displayState, setDisplayState] = useState(false);
   const [backButtState, setBackButtState] = useState(true);
+
 
   const handleChange = (event) => {
     setTitleState(event.target.value);
@@ -23,7 +25,7 @@ const Search = () => {
     e.preventDefault();
     let title = titleState;
     const idResponse = await fetch(
-      "https://imdb-api.com/en/API/SearchMovie/k_q83az6pl/" + title,
+      `https://imdb-api.com/en/API/SearchMovie/${API}/` + title,
       {
         method: "GET",
       }
@@ -36,7 +38,7 @@ const Search = () => {
   async function getMovieInfo(movie) {
     let movieId = movie.id;
     const movieResponse = await fetch(
-      "https://imdb-api.com/en/API/Title/k_q83az6pl/" + movieId,
+      `https://imdb-api.com/en/API/Title/${API}/` + movieId,
       {
         method: "GET",
       }
