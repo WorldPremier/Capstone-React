@@ -4,6 +4,7 @@ import Modal from "react-modal";
 import { Button } from "react-bootstrap";
 import MovieCard from "../static/MovieCard";
 import Results from "../static/Results";
+import {API} from "../constants";
 
 const ModalIn = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
